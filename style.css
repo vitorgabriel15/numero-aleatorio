@@ -3,16 +3,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-    --light-blue: #a8d5e2; /* Azul claro */
-    --sky-blue: #7ec8e3;   /* Azul céu */
-    --medium-blue: #0091d5; /* Azul médio */
-    --dark-blue: #005a9c; /* Azul escuro */
-    --background-blue: #e0f0f9; /* Cor de fundo azul muito claro */
-    --font-primary: 'Playfair Display', serif; /* Fonte primária */
-    --font-secondary: 'Sevillana', cursive; /* Fonte secundária */
+    --light-blue: #a8d5e2;
+    --sky-blue: #7ec8e3;
+    --medium-blue: #0091d5;
+    --dark-blue: #005a9c;
+    --background-blue: #e0f0f9;
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Sevillana', cursive;
 }
 
 body {
@@ -25,32 +26,53 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px;
+}
+
+main {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 90%;
+    width: 500px;
 }
 
 h1 {
     font-family: var(--font-secondary);
     color: var(--dark-blue);
-    font-size: 3em;
+    font-size: 3.5em;
+    margin-bottom: 20px;
 }
 
 h3 {
     color: var(--sky-blue);
     font-family: var(--font-primary);
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 .mensagem {
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: var(--medium-blue);
     margin-top: 20px;
 }
 
 .box {
-    border: 1rem solid var(--sky-blue);
+    border: 2px solid var(--sky-blue);
     display: inline-block;
-    font-size: 2em;
-    padding: 10px;
+    font-size: 2.5em;
+    padding: 15px 25px;
     margin: 10px;
-    background-color: var(--light-blue); /* Fundo das caixas */
-    color: var(--dark-blue); /* Cor do texto dentro das caixas */
-    border-radius: 8px; /* Bordas arredondadas */
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.box:hover {
+    background-color: var(--sky-blue);
+    color: white;
+    transform: scale(1.05);
 }
